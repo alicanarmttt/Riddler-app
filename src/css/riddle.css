@@ -1,0 +1,20 @@
+.cerceve-main {
+  width: auto;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: #96e36c5a;
+  border-radius: 10px;
+}
+
+.form-control-riddle {
+  min-height: 100px;
+  width: 400px;
+  border-radius: 10px;
+}
+.form-control-riddle textarea {
+}
+.form-control.form-control-lg-answer {
+  margin-top: 20px;
+  border-radius: 10px;
+}
