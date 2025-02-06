@@ -7,7 +7,7 @@ import levenshtein from "fast-levenshtein"; // Levenshtein eklendi
 
 const API_URL =
   "https://api-inference.huggingface.co/models/sentence-transformers/all-MiniLM-L6-v2";
-const API_TOKEN = import.meta.env.REACT_APP_HUGGING_FACE_TOKEN; // API Token'ı buraya ekle
+const API_TOKEN = import.meta.env.VITE_HUGGING_FACE_TOKEN; // API Token'ı buraya ekle
 
 function Riddle() {
   const dispatch = useDispatch();
@@ -34,6 +34,7 @@ function Riddle() {
     // 🔹 Eğer Levenshtein mesafesi 0 ise direkt doğru kabul et
     const distance = levenshtein.get(userAnswer, correctAnswer);
     console.log("Levenshtein mesafesi:", distance);
+    console.log("Hugging Face Token:", import.meta.env.VITE_HUGGING_FACE_TOKEN);
 
     if (distance === 0) {
       console.log("✅ Levenshtein ile tam eşleşme!");
